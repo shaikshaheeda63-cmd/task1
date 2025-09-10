@@ -1,0 +1,24 @@
+<?php
+// ------------------------------
+// Task-1: Environment Setup Test
+// ------------------------------
+
+// Database credentials (default XAMPP)
+$servername = "localhost";
+$username   = "root";
+$password   = "";
+$dbname     = "test"; // default database in XAMPP
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("❌ Database Connection failed: " . $conn->connect_error);
+} else {
+    echo "✅ Connected to MySQL successfully!<br>";
+}
+
+// Simple PHP test
+echo "Hello World! PHP & MySQL environment is ready 🚀";
+?>
